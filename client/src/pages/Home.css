@@ -1,0 +1,43 @@
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #0f172a;
+}
+
+.home-card {
+  background: #1e293b;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  color: white;
+  width: 400px;
+}
+.welcome-box h1 {
+ color: #7c6e35;
+}
+.highlight {
+  color: #3b82f6;
+}
+
+.chat-button {
+  background: #3b82f6;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.chat-button:hover {
+  background: #2563eb;
+}
+
+.warning {
+  color: #facc15;
+  font-weight: 500;
+  margin-top: 1rem;
+}

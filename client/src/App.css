@@ -1,0 +1,87 @@
+/* Background setup */
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  font-family: "Poppins", sans-serif;
+}
+
+/* Form card */
+.form {
+  background: rgba(30, 41, 59, 0.95);
+  padding: 2.5rem;
+  border-radius: 16px;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  color: white;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 30px rgba(59, 130, 246, 0.3);
+}
+
+/* Input fields */
+input {
+  padding: 0.7rem;
+  border-radius: 8px;
+  border: 1px solid #334155;
+  background: #0f172a;
+  color: white;
+  outline: none;
+  font-size: 0.95rem;
+  transition: border 0.2s ease, background 0.2s ease;
+}
+
+input:focus {
+  border: 1px solid #3b82f6;
+  background: #1e293b;
+}
+
+/* Buttons */
+button {
+  background: linear-gradient(90deg, #3b82f6, #2563eb);
+  color: white;
+  border: none;
+  padding: 0.7rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(90deg, #2563eb, #1d4ed8);
+  transform: scale(1.02);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Headings inside form */
+.form h2 {
+  text-align: center;
+  color: #60a5fa;
+  margin-bottom: 0.5rem;
+}
+
+/* Links like "Already have an account?" */
+.form a {
+  color: #60a5fa;
+  text-decoration: none;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.form a:hover {
+  text-decoration: underline;
+}
