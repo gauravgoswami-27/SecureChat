@@ -1,30 +1,3 @@
-// import express from "express";
-// import mongoose from "mongoose";
-// import dotenv from "dotenv";
-// import cors from "cors";
-// import authRoutes from "./routes/auth.js";
-// import chatRoutes from "./routes/chat.js";
-
-// dotenv.config();
-
-// const app = express();
-// app.use(cors());
-// app.use(express.json());
-
-// // ✅ Routes
-// app.use("/api/auth", authRoutes);
-// app.use("/api/chat", chatRoutes); // 👈 IMPORTANT — prefix me "api" add karo
-
-// const PORT = process.env.PORT || 5000;
-
-// mongoose
-//   .connect(process.env.MONGO_URI)
-//   .then(() => {
-//     console.log("✅ MongoDB connected");
-//     app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
-//   })
-//   .catch((err) => console.error("❌ MongoDB connection error:", err));
-
 import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
@@ -37,7 +10,16 @@ import chatRoutes from "./routes/chat.js";
 dotenv.config();
 
 const app = express();
-app.use(cors());
+// app.use(cors());
+app.use(
+  cors({
+    origin: [
+      "http://localhost:5173", // local Vite
+      process.env.FRONTEND_URL || "*", // ✅ Vercel URL from environment variable
+    ],
+    credentials: true,
+  })
+);
 app.use(express.json());
 
 // Routes
@@ -48,7 +30,9 @@ app.use("/api/chat", chatRoutes); // 👈 corrected path (frontend bhi /api/chat
 const server = createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:5173", // 👈 Vite frontend URL (change if needed)
+    origin: ["http://localhost:5173", // 👈 Vite frontend URL (change if needed)
+    process.env.FRONTEND_URL || "*", //Vercel URL from environment variables
+    ],
     methods: ["GET", "POST"],
   },
 });
@@ -98,11 +82,11 @@ io.on("connection", (socket) => {
 });
 
 // ✅ Mongo + Server Start
-const PORT = 5000;
+const PORT = process.env.PORT ||5000;
 mongoose
   .connect(process.env.MONGO_URI)
   .then(() => {
     console.log("✅ MongoDB connected");
-    server.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
+    server.listen(PORT,"0.0.0.0", () => console.log(`🚀 Server running on port ${PORT}`));
   })
   .catch((err) => console.error("❌ MongoDB connection error:", err));
