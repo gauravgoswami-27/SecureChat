@@ -38,4 +38,4 @@ It supports *secure user registration, **login, **private messaging, and **insta
 
 ---
 
-## 📁 Folder Structure
+
