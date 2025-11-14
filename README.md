@@ -4,6 +4,7 @@ A real-time, end-to-end secure chat application built using *Node.js, **Express,
 It supports *secure user registration, **login, **private messaging, and **instant message delivery* with Socket.IO.
 
 ---
+![WhatsApp Image 2025-11-14 at 12 10 52_e16cb64f](https://github.com/user-attachments/assets/03412277-1a60-4b0e-9e90-0c584ce45dec)
 
 ## 🚀 Features
 
