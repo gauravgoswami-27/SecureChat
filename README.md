@@ -2,28 +2,28 @@
 
 This is a real-time chat application, so:
 
-✅ You must open the app in two browsers / two tabs / two devices
+✅ You **must** open the app in **two browsers** / two tabs / two devices
 ✅ Login with two different user accounts
 
-Only then you can test:
+->Only then you can test:
 
-Real-time message sending
+->Real-time message sending
 
-Online/offline status
+->Online/offline status
 
-Socket events
+->Socket events
 
-Encrypted chat storage
+->Encrypted chat storage
 
 🧪 Testing Steps
 
-Register User A
+1.Register User A
 
-Register User B
+2.Register User B
 
-Login User A in one browser
+3.Login User A in one browser
 
-Login User B in another browser
+4.Login User B in another browser
 
 Send messages → You’ll see instant updates
 
