@@ -18,7 +18,7 @@ This is a real-time chat application, so:
 🧪 Testing Steps
 
 1.Register User A
-<img width="1919" height="921" alt="Screenshot 2025-11-06 222500" src="https://github.com/user-attachments/assets/4d60cf51-f007-4939-a2db-385a08402f85" />
+<img width="1914" height="918" alt="image" src="https://github.com/user-attachments/assets/f0739440-fb34-4429-bc04-9be7a3a6ed9f" />
 
 
 2.Register User B
